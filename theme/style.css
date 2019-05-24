@@ -1,0 +1,157 @@
+/*
+ * Theme Name: Nairi Theme
+ * Author: Lars Bärtschi
+ * Description: Custom theme for Nairi
+ * Version: 0.0.1
+ */
+
+/*
+ * Load fonts
+ */
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Noto+Sans');
+
+/*
+ * Site-wide settings
+ */
+body {
+  font-family: 'Merriweather', serif;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-only {
+	display: none;
+}
+
+.desktop-only {
+	display: block;
+}
+
+table {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+	width: calc(100% - 2px);
+}
+
+table tr {
+	border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+table tr td,th {
+	text-align: center;
+	padding: 10px 0;
+}
+
+table tr th:not(:last-child),td:not(:last-child) { 
+	border-right: 1px solid #ddd; 
+}
+
+/*
+ * Navigation
+ */
+nav {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #880000;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 26px;
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px 20px;
+}
+
+nav a:hover {
+  background-color: #660000;
+}
+
+nav a.selected {
+  background-color: #660000;
+}
+
+nav .burger:after {
+	content: "\f333";
+	font: normal 20px/1 dashicons;
+	float: right;
+	display: block;
+	font-size: 50px;
+	color: white;
+	margin: 5px;
+}
+
+nav .mobile {
+	width: 100%;
+}
+
+/*
+ * Sidebar
+ */
+.sidebar ul {
+	border: 1px solid #ccc;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	float: left;
+	margin-right: 10px;
+	margin-left: -10px;
+}
+
+.sidebar ul li a:hover {
+	background-color: #ccc;
+}
+
+.sidebar ul li a.active {
+	background-color: #ccc;
+}
+
+.sidebar ul li a {
+	text-decoration: none;
+	font-size: 22px;
+	color: black;
+	padding: 3px 8px;
+	display: block;
+}
+
+/*
+ * Content
+ */
+.content {
+	width: calc(1200px - 20px);
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+@media screen and (max-width: 1200px) {
+	nav {
+		width: 100vw;
+	}
+	
+	.content {
+		width: 100vw;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.mobile-only {
+		display: block;
+	}
+	
+	.desktop-only {
+		display: none;
+	}
+}
+
