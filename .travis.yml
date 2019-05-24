@@ -8,8 +8,8 @@ jobs:
     - stage: docker
       script:
         - docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
-        - "docker build . -t LarsBaertschi/nairi-wp"
-        - "docker push LarsBaertschi/nairi-wp"
+        - "docker build . -t larcce/nairi-wp"
+        - "docker push larcce/nairi-wp"
 
 stages:
   - docker
