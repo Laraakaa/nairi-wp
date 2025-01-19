@@ -1,4 +1,4 @@
-FROM wordpress:5.2-apache
+FROM wordpress:6.7-apache
 
 # Copy plugins
 COPY plugins/* /var/www/html/wp-content/plugins/
